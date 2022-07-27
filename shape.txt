@@ -1,0 +1,18 @@
+shared data:
+int n_philos;
+int tm_die;
+int	tm_eat;
+int	tm_sleep;
+int	min_meals;
+pthread_mutex_t	*mtxs;
+pthread_mutex_t	*msg_mtxs; (3)
+pthread_mutex_t	death_mtx;
+
+
+personal data:
+int	i_philo;
+int	eat_times;
+int	
+
+
+the unreturn of the print_msg functions may cause the program to just hang at some point of time
