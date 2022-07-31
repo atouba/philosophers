@@ -6,7 +6,7 @@
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:29:21 by atouba            #+#    #+#             */
-/*   Updated: 2022/07/31 17:40:49 by atouba           ###   ########.fr       */
+/*   Updated: 2022/07/31 18:49:48 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,7 @@ void	init(t_philo *philos, int n, t_shared_data *shared)
 	}
 }
 
-void	launch_processes(pthread_t *t, t_philo *philos, t_shared_data *shared
-		, pthread_t *thread_death)
+void	launch_processes(pthread_t *t, t_philo *philos, t_shared_data *shared)
 {
 	int	i;
 	int	n;
@@ -104,7 +103,7 @@ int	main(int ac, char **av)
 	t = malloc(sizeof(pthread_t) * ft_atoi(av[1]));
 	thread_death = malloc(sizeof(pthread_t));
 	philos = malloc(sizeof(t_philo) * ft_atoi(av[1]));
-	init_set_args(philos, av, &shared);
+	init_set_args(av, &shared);
 	all_point_to(philos, &shared);
-	launch_processes(t, philos, &shared, thread_death);
+	launch_processes(t, philos, &shared);
 }

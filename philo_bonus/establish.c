@@ -6,14 +6,13 @@
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:33:21 by atouba            #+#    #+#             */
-/*   Updated: 2022/07/31 17:46:04 by atouba           ###   ########.fr       */
+/*   Updated: 2022/07/31 19:01:30 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void	init_set_args(t_philo *ph, char **av
-					, t_shared_data *shared)
+void	init_set_args(char **av, t_shared_data *shared)
 {
 	int	i;
 	int	n;
@@ -53,6 +52,8 @@ int	check_args(int ac, char **av)
 	if (ac > 6 || ac < 5)
 		return (0);
 	if (ft_atoi(av[1]) == 0)
+		return (0);
+	if (av[5] && ft_atoi(av[5]) == 0)
 		return (0);
 	while (av[i])
 	{

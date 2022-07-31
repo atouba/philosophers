@@ -9,7 +9,7 @@ all:$(NAME_BONUS)
 OBJS_BONUS = $(FILES_BONUS:.c=.o)
 
 $(NAME_BONUS):$(OBJS_BONUS)
-	$(CC) $(OBJS_BONUS)  -o $(NAME_BONUS)
+	$(CC) $(FILES_BONUS) $(FLAGS) -o $(NAME_BONUS)
 
 clean:
 	rm -rf *.o

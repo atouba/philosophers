@@ -6,7 +6,7 @@
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:33:21 by atouba            #+#    #+#             */
-/*   Updated: 2022/07/28 17:22:17 by atouba           ###   ########.fr       */
+/*   Updated: 2022/07/31 19:01:23 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ int	check_args(int ac, char **av)
 	if (ac > 6 || ac < 5)
 		return (0);
 	if (ft_atoi(av[1]) == 0)
+		return (0);
+	if (av[5] && ft_atoi(av[5]) == 0)
 		return (0);
 	while (av[i])
 	{

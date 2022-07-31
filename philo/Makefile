@@ -10,7 +10,7 @@ all:$(NAME)
 OBJS = $(FILES:.c=.o)
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) $(FLAGS) -o $(NAME)
+	$(CC) $(FILES) $(FLAGS) -o $(NAME)
 
 
 clean:

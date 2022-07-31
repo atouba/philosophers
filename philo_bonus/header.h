@@ -6,7 +6,7 @@
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:18:50 by atouba            #+#    #+#             */
-/*   Updated: 2022/07/31 17:47:02 by atouba           ###   ########.fr       */
+/*   Updated: 2022/07/31 18:49:18 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ typedef struct s_philo
 int				ft_atoi(const char *str);
 int				check_args(int ac, char **av);
 int				allocate_to_nums(t_philo *phs);
-void			init_set_args(t_philo *phs, char **av,
-					t_shared_data *shared);
+void			init_set_args(char **av, t_shared_data *shared);
 void			all_point_to(t_philo *philo, t_shared_data *shared);
 long long		currtime(void);
 int				time_elapsed(long long start_time);
