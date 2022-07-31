@@ -6,7 +6,7 @@
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:18:50 by atouba            #+#    #+#             */
-/*   Updated: 2022/07/29 16:46:23 by atouba           ###   ########.fr       */
+/*   Updated: 2022/07/31 16:04:51 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ typedef struct shared_data
 	long long		start_time;
 	int				dead_msg;
 	sem_t			*sems;
+	sem_t			*sem_eats;
 	sem_t			*print_sem;
+	int				is_all_eat;
 }	t_shared_data;
 
 typedef struct s_philo
