@@ -6,7 +6,7 @@
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:33:21 by atouba            #+#    #+#             */
-/*   Updated: 2022/07/29 09:57:56by atouba           ###   ########.fr       */
+/*   Updated: 2022/07/31 17:46:04 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,8 @@ void	init_set_args(t_philo *ph, char **av
 	i = 0;
 	shared->n_philos = ft_atoi(av[1]);
 	n = shared->n_philos;
-	// while (i < shared->n_philos)
-	// {
-	// 	ph->i_philo = i + 1;
-	// 	ph->new_st_time = currtime();
-	// 	ph->eat_times = 0;
-	// 	ph->last_eat = currtime();
-	// 	// pthread_mutex_init(&mtxs[i], 0);
-	// 	i++;
-	// }
-	
-	// pthread_mutex_init(&mtxs[i], 0);
-	// pthread_mutex_init(&mtxs[i + 1], 0);
-
-	// sem_init(shared->sems, 0, n);
-	// // sem_init(&phs->dead_sem, 0, 1);
-	// sem_init(shared->print_sem, 0, 1);
-
-	// shared->sems = sem_open("sems", O_CREAT, 777, 1);
-	// shared->print_sem = sem_open("print_sem", O_CREAT, 777, 1);
 	if (sem_unlink("sems") == -1 || sem_unlink("print_sem") == -1)
 		printf("error in sem_unlink\n");
-	// sem_init(&phs->dead_sem, 0, 1);
-	// sem_init(&phs->print_sem, 0, 1);
 	shared->tm_die = ft_atoi(av[2]);
 	shared->tm_eat = ft_atoi(av[3]);
 	shared->tm_sleep = ft_atoi(av[4]);
@@ -51,8 +30,6 @@ void	init_set_args(t_philo *ph, char **av
 	shared->dead_msg = 0;
 	shared->total_must_eat = -1;
 	shared->is_all_eat = -1;
-	// shared->sems = sem_open("sems", O_CREAT, 0777, 1);
-	// shared->print_sem = sem_open("print_sem", O_CREAT, 0777, 1);
 	if (av[5])
 	{
 		shared->total_must_eat = ft_atoi(av[5]);

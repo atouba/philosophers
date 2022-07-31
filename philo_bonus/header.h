@@ -6,7 +6,7 @@
 /*   By: atouba <atouba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:18:50 by atouba            #+#    #+#             */
-/*   Updated: 2022/07/31 16:04:51 by atouba           ###   ########.fr       */
+/*   Updated: 2022/07/31 17:47:02 by atouba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <sys/time.h>
 # include <semaphore.h>
 # include <signal.h>
+
 typedef struct shared_data
 {
 	int				n_philos;
@@ -40,9 +41,6 @@ typedef struct s_philo
 	long long		new_st_time;
 	int				eat_times;
 	int				last_eat;
-	// pthread_mutex_t	*mtxs;
-	// pthread_mutex_t	*dead_mtx;
-	// sem_t			dead_sem;
 	t_shared_data	*shared_data;
 }	t_philo;
 
